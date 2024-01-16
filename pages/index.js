@@ -1,5 +1,5 @@
-import appConfig from '../config.json';
 import { Box, Button, Text, TextField, Image } from '@skynexui/components';
+import appConfig from '../config.json';
 
 function GlobalStyle() {
     return (
@@ -31,39 +31,37 @@ function GlobalStyle() {
 }
 
 function Title(props) {
-    console.log(props);
     const Tag = props.tag || 'h1';
     return (
         <>
-            <Tag>{props.children}</Tag>
+            <Tag>
+                {props.children}
+            </Tag>
             <style jsx>{`
                 ${Tag} {
                     color: ${appConfig.theme.colors.neutrals['000']};
                     font-size: 24px;
-                    font-weight: 600;
-                }            
-            `}
-            </style>
+                    fonnt-weight: 600;
+                }
+            `}</style>
         </>
-
     );
 }
 
-
-/* // Componente React
-function HomePage() {
-    // JSX
+/* export default function Page() {
     return (
         <div>
-            <GlobalStyle/>
-            <Title tag="h1">Boas vindas de volta!</Title>
-            <h2>Discord - Alura Matrix</h2>
+            <GlobalStyle />
+            <Title tag="h2">Hello world!</Title>
+            <h2>
+                Discord - Alura Matrix!
+            </h2>
         </div>
     )
 } */
 
-export default function PaginaInicial() {
-    const username = 'moretteGustavo';
+export default function HomePage() {
+    const username = 'morettegustavo';
 
     return (
         <>
@@ -171,4 +169,3 @@ export default function PaginaInicial() {
         </>
     );
 }
-
